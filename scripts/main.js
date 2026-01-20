@@ -422,16 +422,6 @@ function generateShareLink() {
   showShareLink(shareURL);
 }
 
-  // encode in Base64
-  shareCode = btoa(shareCode);
-
-  // dynamically get current URL
-  let currentURL = window.location.origin + window.location.pathname;
-  let shareURL = currentURL + "?r=" + shareCode;
-
-  showShareLink(shareURL);
-}
-
 function showShareLink(shareURL) {
   let shareBox = document.getElementById("getlink-textbox");
   shareBox.value = shareURL;

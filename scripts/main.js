@@ -418,18 +418,6 @@ function generateShareLink() {
   showShareLink(shareURL);
 }
 
-function generateBlankTemplateLink() {
-  // create a temporary blank ranking array
-  let blankRanking = new Array(ranking.length).fill(0); // 0 = blank
-  let shareCode = blankRanking.map(id => ("0" + id).slice(-2)).join("");
-  shareCode = btoa(shareCode);
-
-  let currentURL = window.location.origin + window.location.pathname;
-  let shareURL = currentURL + "?r=" + shareCode;
-
-  showShareLink(shareURL);
-}
-
 function showShareLink(shareURL) {
   let shareBox = document.getElementById("getlink-textbox");
   shareBox.value = shareURL;
